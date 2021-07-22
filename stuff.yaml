@@ -1,0 +1,36 @@
+#ENC[AES256_GCM,data:nnTk13GcmKbZwhuohdWU8Xk7,iv:Jw63wTDyU6C6nvyqArIK4/ZQ4ncWu56+YV6m78uIuZA=,tag:1B3XgM2P/rgq6jrDgCpdPw==,type:comment]
+hello: ENC[AES256_GCM,data:yiyik5s=,iv:xuZ+iGbu/TYcXlCqCKeMi8bu3fTkdBH1oW6Ci1rqaA0=,tag:PD8kMoel0Q3gSWBbigZIaQ==,type:str]
+foo:
+    - ENC[AES256_GCM,data:YpOC,iv:XYsHjUgz3OJI2cHcba+ecSx06y3AquTLaCHUKuviHlM=,tag:Xsvi7lbQcx4UIl2aoL3aGA==,type:str]
+    - ENC[AES256_GCM,data:BASz,iv:kGgWhgwVCaKsHOjhPFvT9kqMGrgcjc7sQBUzNFFsrlg=,tag:bU5jo6Hg0O9vPFe6hliuPg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-07-22T22:10:40Z"
+    mac: ENC[AES256_GCM,data:y8+QyT+C5Yweo6Df1ijBlTw1RTJg95GgrVsdunsnrS2PFT1laD+tSAa0zlKaIYGJR5eO3aaFWy3fnQoY9BoQjaseVsf9ycZ8h/QNXOnOJS+wnN+kP916rencIbIDwfPPaZh7S01G0iykggCRndNzCfLHsj8cB/1cs1IxvKJBkv0=,iv:u1YdVD5tRuav/GCTg7rCu4ezONaYKbzR+my664jd/oc=,tag:3lo4vUdEQ5J51siMUTVKWA==,type:str]
+    pgp:
+        - created_at: "2021-07-22T22:10:39Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA5rXogu83aB7AQ/9EpNG4/3cDrRtThL+kRKWEvobeWLSGGm93/gi1aWatRMa
+            so0i1i18KR9PlQgW0DnsMjtnqwCKlaRdlDTpi4DySRanDttFFv3G+HOcxUBPsHWJ
+            Gg1PW7fqfL0BZQUlzbfxphFqUn3QdqghFXUSN0HAcyGAsl2gxP0+pAVT5TCYQ28T
+            jw/2oD5m8CWy8gkPhcLnMBjXMJOLDBI8lbdvTmprxuD2TZQNf9h3CBZuajenLeHA
+            mgu42WSK68XWUeW1VxR1VdC4PCyfF1G5rHT3Xeugk8HieL4VB120HCXrMo7MlPWr
+            3ix4KV7wpWO5dsVFFKM7na0ZbWwQT7UvVOu3q+eqLZ4R61220UTEFSnq4YyzU6c1
+            589KfE4aRwaTexBMJd5IAbz3kzPE54cLq1QxTu5hji2S2Og+WX3WD9G9FCkvuA4D
+            lmd1B6HIpxd63SOymD/mtkb2vL1053z6c8bv0BxzckfPcOZQjqnFyXr4KqLmYlju
+            OaJEmsZvsk5QJ6L+dCtXCX5GIqidOM18FO/t/GJ724BwNJPP6nf/8+kRnGWKckbN
+            sA7r36++KcnIxLJWcpIsB8L95wpYIV0SClYl8NsPpFxvsM/vAMZe8jOAMpA35JFo
+            QmFMt8r+aKWWgPBZnSnfu8KNl+RMf3L3ixcu5N8q4JkAEeUW9IU493wA/Ce+ukXS
+            XgHy1qqjllsICokuiMEuMirPtGu6HPMvFOEIsg+AMgMCMnmOIauRyVNDFyYTdvEO
+            CeSgcL/DyMIPTxAv8XB4TS6AcFYI1C56LSWXC/kxXfH2jABODIu2yurpxKuW0G4=
+            =1agT
+            -----END PGP MESSAGE-----
+          fp: B48BD4B3F5ADA42DB93BA424E8F059F5C017B134
+    unencrypted_suffix: _unencrypted
+    version: 3.7.1

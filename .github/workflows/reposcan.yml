@@ -9,3 +9,11 @@ jobs:
       uses: edplato/trufflehog-actions-scan@master
       with:
         scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json" # Add custom options here*
+    - uses: actions/checkout@v2
+    - name: Run Gitleaks
+      uses: eeveebank/github-actions-gitleaks@v1.0.0
+      with:
+        depth: 1
+    - uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: gitleaks.sarif

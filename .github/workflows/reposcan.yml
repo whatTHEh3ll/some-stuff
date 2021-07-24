@@ -1,19 +1,23 @@
-name: reposcan
-on: push
+name: GitGuardian scan
+
+on: [push, pull_request]
+
 jobs:
-  security:
+  scanning:
+    name: GitGuardian scan
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: trufflehog-actions-scan
-      uses: edplato/trufflehog-actions-scan@master
-      with:
-        scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json" # Add custom options here*
-    - uses: actions/checkout@v2
-    - name: Run Gitleaks
-      uses: eeveebank/github-actions-gitleaks@v1.0.0
-      with:
-        depth: 1
-    - uses: github/codeql-action/upload-sarif@v1
-      with:
-        sarif_file: gitleaks.sarif
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # fetch all history so multiple commits can be scanned
+      - name: GitGuardian scan
+        uses: GitGuardian/gg-shield-action@master
+        with:
+          args: -v --all-policies
+        env:
+          GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
+          GITHUB_PUSH_BASE_SHA: ${{ github.event.base }}
+          GITHUB_PULL_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
